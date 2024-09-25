@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Requests</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Section -->
+        <section id="loginSection">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p id="loginMessage" class="error-message"></p>
+            </form>
+        </section>
+
+        <!-- Request Section -->
+        <section id="requestSection" class="hidden">
+            <h1>Submit a New Request</h1>
+            <form id="requestForm">
+                <div class="form-group">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" placeholder="Enter your comments" required></textarea>
+                </div>
+                <div id="itemsContainer" class="items-container">
+                    <!-- Dynamic items will be added here -->
+                </div>
+                <button type="button" id="addItemButton" class="btn">Add Item</button>
+                <button type="submit" id="submitButton" class="btn">Submit Request</button>
+            </form>
+            <br>
+            <br>
+            <div id="userRequests" class="requests-list">
+                <!-- User requests will be displayed here -->
+            </div>
+            <button id="logoutButton" class="btn logout-btn">Logout</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
